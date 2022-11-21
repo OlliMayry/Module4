@@ -7,7 +7,7 @@ import {
 } from '@angular/fire/auth-guard';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
-const redirectLoggedInToHome = () => redirectLoggedInTo(['home']);
+const redirectLoggedInToHome = () => redirectLoggedInTo(['feed']);
 
 const routes: Routes = [
   {
@@ -17,14 +17,15 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
+    loadChildren: () => import('./feed/feed.module').then( m => m.FeedPageModule),
     ...canActivate(redirectUnauthorizedToLogin)
   },
   {
     path: '**',
     redirectTo: '',
     pathMatch: 'full',
-  },  {
+  },
+  {
     path: 'feed',
     loadChildren: () => import('./feed/feed.module').then( m => m.FeedPageModule)
   },
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path: 'search',
     loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
+  },
+  {
+    path: 'search-result',
+    loadChildren: () => import('./search-result/search-result.module').then( m => m.SearchResultPageModule)
   },
 
   
