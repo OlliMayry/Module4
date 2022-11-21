@@ -12,6 +12,9 @@ export const environment = {
     authDomain: 'newproject-3532b.firebaseapp.com',
     messagingSenderId: '116325335458',
   },
+  ticketmaster: {
+    baseURL: 'https://app.ticketmaster.com/discovery/v2/events.json?countryCode=FI&apikey=Vl3rGMD8shGdbIT37Z1qYvgscwwQYbSG'
+  },
   production: false
 };
 

@@ -37,4 +37,15 @@
       <p>Click the icon in the top left to toggle the menu.</p>
     </ion-content>
   </div>
+
+  <div class="ch-menu">
+    <p>Chef Menu</p>
+
+    <div class="wrapper">
+      <div class="item" *ngFor="let item of user">
+        <img id="img" src="../../assets/food/{{item.image}}" />
+        <p>{{item.name | slice:0:6}}</p>
+      </div>
+    </div>
+  </div>
 </ion-app>
