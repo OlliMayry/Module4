@@ -24,7 +24,19 @@ const routes: Routes = [
     path: '**',
     redirectTo: '',
     pathMatch: 'full',
+  },  {
+    path: 'feed',
+    loadChildren: () => import('./feed/feed.module').then( m => m.FeedPageModule)
   },
+  {
+    path: 'event-page',
+    loadChildren: () => import('./event-page/event-page.module').then( m => m.EventPagePageModule)
+  },
+  {
+    path: 'search',
+    loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
+  },
+
   
 ];
 
