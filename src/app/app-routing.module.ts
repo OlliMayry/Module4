@@ -12,6 +12,11 @@ const redirectLoggedInToHome = () => redirectLoggedInTo(['feed']);
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
+    path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule),
     ...canActivate(redirectLoggedInToHome)
   },
@@ -42,7 +47,7 @@ const routes: Routes = [
     loadChildren: () => import('./search-result/search-result.module').then( m => m.SearchResultPageModule)
   },
 
-  
+
 ];
 
 @NgModule({

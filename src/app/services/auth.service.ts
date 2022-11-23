@@ -20,7 +20,7 @@ export class AuthService {
     }
   }
 
-  async login ({ email, password }) {
+  async login({ email, password }) {
     try {
       const user = await signInWithEmailAndPassword(
         this.auth,
@@ -33,7 +33,7 @@ export class AuthService {
     }
   }
 
-  logout () {
+  logout() {
     return signOut(this.auth);
   }
 }

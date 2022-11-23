@@ -21,10 +21,10 @@ export class LoginPage implements OnInit {
     private router: Router
   ) {}
 
-  get email () {
+  get email() {
     return this.credentials.get('email');
   }
-  get password () {
+  get password() {
     return this.credentials.get('password');
   }
 

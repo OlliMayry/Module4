@@ -1,6 +1,6 @@
-<ion-header>
-	<ion-toolbar color="primary">
-		<ion-title>My App</ion-title>
+<ion-header class="ion-margin ion-text-center">
+	<ion-toolbar color="light">
+		<ion-title>Event Finder</ion-title>
 	</ion-toolbar>
 </ion-header>
 
@@ -19,9 +19,18 @@
 			>
 		</ion-item>
 
-		<ion-button type="submit" expand="block" [disabled]="!credentials.valid">Log in</ion-button>
-		<ion-button type="button" expand="block" color="secondary" (click)="register()"
-			>Create account</ion-button
-		>
+    <ion-button  class="next-btn" color="white" expand="block" shape="round" routerLink="user-login">Login with Username</ion-button>
+    <ion-button  color="white" expand="block" shape="round" >Login with Google</ion-button>
+    <ion-button type="button" expand="block" color="white" (click)="register()">Create account</ion-button>
+
+
 	</form>
 </ion-content>
+
+
+
+
+
+
+
+
